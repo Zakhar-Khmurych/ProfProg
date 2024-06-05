@@ -1,5 +1,6 @@
 a.
-- program should be able to receive list of ints as an input
+- program should parse console input
+- program should be able to receive list of ints
 - program should be able to sort the contents of its input arguments
 - program should return the smallest int
 - program should return error if the input was invalid
