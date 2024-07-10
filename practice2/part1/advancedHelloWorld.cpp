@@ -2,6 +2,7 @@
 #include <fstream>
 #include <unordered_map>
 #include <string>
+#include <print>
 
 const std::string database = "totallySecureUserData.txt";
 const std::string bread = "bread";
@@ -17,10 +18,9 @@ std::string loadUsers(std::unordered_map<std::string, int>& userData) {
             lastUser = name;
         }
         inFile.close();
+    } else {
+        lastUser = "nobody";
     }
-	else {
-		lastUser = "nobody";
-	}
     return lastUser;
 }
 
@@ -35,26 +35,26 @@ void saveUsers(const std::unordered_map<std::string, int>& userData) {
 void handleUser(const std::string& name, const std::string& command) {
     std::unordered_map<std::string, int> userData;
     std::string lastUser = loadUsers(userData);
-	std::cout << "Hi there, " << lastUser << std::endl;
+    std::println("Hi there, {}", lastUser);
 
     if (name == bread) {
         std::ofstream outFile(database, std::ofstream::trunc);
         outFile.close();
-        std::cout << "Everything turns into bread." << std::endl;
+        std::println("Everything turns into bread.");
         return;
     }
 
     if (command == "delete") {
         userData.erase(name);
-        std::cout << "Data for " << name << " have been reset." << std::endl;
+        std::println("Data for {} have been reset.", name);
     } else {
         int& count = userData[name];
         if (count == 0) {
-            std::cout << "Welcome, " << name << "!" << std::endl;
+            std::println("Welcome, {}!", name);
             count = 1;
         } else {
             count++;
-            std::cout << "Hello again(x" << count << "), " << name << "!" << std::endl;
+            std::println("Hello again(x{}), {}!", count, name);
         }
     }
 

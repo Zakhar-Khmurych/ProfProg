@@ -1,1 +1,2 @@
-print("Hello, World!")
+var greeting = "hellow, world!"
+print(greeting)
