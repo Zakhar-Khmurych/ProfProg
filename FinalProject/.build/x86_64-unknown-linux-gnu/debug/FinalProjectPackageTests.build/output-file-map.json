@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/master.swiftdeps"
+  },
+  "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.derived/runner.swift": {
+    "dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/runner.d",
+    "object": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/runner.swift.o",
+    "swiftmodule": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/runner.swiftdeps"
+  }
+}
