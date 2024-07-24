@@ -1,0 +1,53 @@
+{
+  "": {
+    "swift-dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/master.swiftdeps"
+  },
+  "/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/ConsoleHandler.swift": {
+    "dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/ConsoleHandler.d",
+    "object": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/ConsoleHandler.swift.o",
+    "swiftmodule": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/ConsoleHandler~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/ConsoleHandler.swiftdeps"
+  },
+  "/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/FileService.swift": {
+    "dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/FileService.d",
+    "object": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/FileService.swift.o",
+    "swiftmodule": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/FileService~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/FileService.swiftdeps"
+  },
+  "/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/InventoryService.swift": {
+    "dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/InventoryService.d",
+    "object": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/InventoryService.swift.o",
+    "swiftmodule": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/InventoryService~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/InventoryService.swiftdeps"
+  },
+  "/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/Order.swift": {
+    "dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/Order.d",
+    "object": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/Order.swift.o",
+    "swiftmodule": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/Order~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/Order.swiftdeps"
+  },
+  "/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/OrderService.swift": {
+    "dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/OrderService.d",
+    "object": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/OrderService.swift.o",
+    "swiftmodule": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/OrderService~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/OrderService.swiftdeps"
+  },
+  "/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/Product.swift": {
+    "dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/Product.d",
+    "object": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/Product.swift.o",
+    "swiftmodule": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/Product~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/Product.swiftdeps"
+  },
+  "/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/User.swift": {
+    "dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/User.d",
+    "object": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/User.swift.o",
+    "swiftmodule": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/User~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/User.swiftdeps"
+  },
+  "/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/UserService.swift": {
+    "dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/UserService.d",
+    "object": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/UserService.swift.o",
+    "swiftmodule": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/UserService~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/UserService.swiftdeps"
+  }
+}

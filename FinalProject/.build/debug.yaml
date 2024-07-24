@@ -1,0 +1,164 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "FinalProject-debug.module": ["<FinalProject-debug.module>"]
+  "FinalProjectPackageDiscoveredTests-debug.module": ["<FinalProjectPackageDiscoveredTests-debug.module>"]
+  "FinalProjectPackageTests-debug.module": ["<FinalProjectPackageTests-debug.module>"]
+  "FinalProjectPackageTests-debug.test": ["<FinalProjectPackageTests-debug.test>"]
+  "FinalProjectTests-debug.module": ["<FinalProjectTests-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<FinalProject-debug.module>"]
+  "test": ["<FinalProject-debug.module>","<FinalProjectPackageTests-debug.test>","<FinalProjectTests-debug.module>"]
+default: "main"
+nodes:
+  "/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/home/ubuntu/practice1/ProfProg/FinalProject/Tests/FinalProjectTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/FinalProject.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.swiftmodule"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/FinalProject.swiftmodule.o"]
+    description: "Wrapping AST for FinalProject for debugging"
+    args: ["/home/ubuntu/swift/swift-5.10-DEVELOPMENT-SNAPSHOT-2024-03-02-a-ubuntu22.04/usr/bin/swiftc","-modulewrap","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.swiftmodule","-o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/FinalProject.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/ConsoleHandler.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/FileService.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/InventoryService.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/Order.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/OrderService.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/Product.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/User.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/UserService.swift"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/sources"]
+    description: "Write auxiliary file /home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/sources"
+
+  "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/FinalProjectPackageDiscoveredTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.swiftmodule"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/FinalProjectPackageDiscoveredTests.swiftmodule.o"]
+    description: "Wrapping AST for FinalProjectPackageDiscoveredTests for debugging"
+    args: ["/home/ubuntu/swift/swift-5.10-DEVELOPMENT-SNAPSHOT-2024-03-02-a-ubuntu22.04/usr/bin/swiftc","-modulewrap","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.swiftmodule","-o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/FinalProjectPackageDiscoveredTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.derived/FinalProjectTests.swift","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.derived/all-discovered-tests.swift"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/sources"]
+    description: "Write auxiliary file /home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/sources"
+
+  "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.derived/all-discovered-tests.swift":
+    tool: test-discovery-tool
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/InventoryServiceTests.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/UserServiceTests.swift.o"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.derived/FinalProjectTests.swift","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.derived/all-discovered-tests.swift"]
+
+  "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/FinalProjectPackageTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.swiftmodule"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/FinalProjectPackageTests.swiftmodule.o"]
+    description: "Wrapping AST for FinalProjectPackageTests for debugging"
+    args: ["/home/ubuntu/swift/swift-5.10-DEVELOPMENT-SNAPSHOT-2024-03-02-a-ubuntu22.04/usr/bin/swiftc","-modulewrap","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.swiftmodule","-o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/FinalProjectPackageTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.derived/runner.swift"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/sources"]
+    description: "Write auxiliary file /home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/sources"
+
+  "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.derived/runner.swift":
+    tool: test-entry-point-tool
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.swiftmodule"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.derived/runner.swift"]
+
+  "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/ConsoleHandler.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/FileService.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/FinalProject.swiftmodule.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/InventoryService.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/Order.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/OrderService.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/Product.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/User.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/UserService.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/FinalProjectPackageDiscoveredTests.swiftmodule.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/FinalProjectTests.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/all-discovered-tests.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/FinalProjectPackageTests.swiftmodule.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/runner.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/FinalProjectTests.swiftmodule.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/InventoryServiceTests.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/UserServiceTests.swift.o"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.product/Objects.LinkFileList"
+
+  "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/FinalProjectTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.swiftmodule"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/FinalProjectTests.swiftmodule.o"]
+    description: "Wrapping AST for FinalProjectTests for debugging"
+    args: ["/home/ubuntu/swift/swift-5.10-DEVELOPMENT-SNAPSHOT-2024-03-02-a-ubuntu22.04/usr/bin/swiftc","-modulewrap","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.swiftmodule","-o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/FinalProjectTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/home/ubuntu/practice1/ProfProg/FinalProject/Tests/FinalProjectTests/InventoryServiceTests.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Tests/FinalProjectTests/UserServiceTests.swift"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/sources"]
+    description: "Write auxiliary file /home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/sources"
+
+  "/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/swift-version-368B64E4461193D2.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/home/ubuntu/swift/swift-5.10-DEVELOPMENT-SNAPSHOT-2024-03-02-a-ubuntu22.04/usr/bin/swiftc"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/swift-version-368B64E4461193D2.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/swift-version-368B64E4461193D2.txt"
+
+  "<FinalProject-debug.module>":
+    tool: phony
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/ConsoleHandler.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/FileService.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/InventoryService.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/Order.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/OrderService.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/Product.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/User.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/UserService.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.swiftmodule"]
+    outputs: ["<FinalProject-debug.module>"]
+
+  "<FinalProjectPackageDiscoveredTests-debug.module>":
+    tool: phony
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/FinalProjectTests.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/all-discovered-tests.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.swiftmodule"]
+    outputs: ["<FinalProjectPackageDiscoveredTests-debug.module>"]
+
+  "<FinalProjectPackageTests-debug.module>":
+    tool: phony
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/runner.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.swiftmodule"]
+    outputs: ["<FinalProjectPackageTests-debug.module>"]
+
+  "<FinalProjectPackageTests-debug.test>":
+    tool: phony
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.xctest"]
+    outputs: ["<FinalProjectPackageTests-debug.test>"]
+
+  "<FinalProjectTests-debug.module>":
+    tool: phony
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/InventoryServiceTests.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/UserServiceTests.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.swiftmodule"]
+    outputs: ["<FinalProjectTests-debug.module>"]
+
+  "C.FinalProject-debug.module":
+    tool: shell
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/ConsoleHandler.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/FileService.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/InventoryService.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/Order.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/OrderService.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/Product.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/User.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/UserService.swift","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/swift-version-368B64E4461193D2.txt","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/sources"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/ConsoleHandler.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/FileService.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/InventoryService.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/Order.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/OrderService.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/Product.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/User.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/UserService.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.swiftmodule"]
+    description: "Compiling Swift Module 'FinalProject' (8 sources)"
+    args: ["/home/ubuntu/swift/swift-5.10-DEVELOPMENT-SNAPSHOT-2024-03-02-a-ubuntu22.04/usr/bin/swiftc","-module-name","FinalProject","-emit-dependencies","-emit-module","-emit-module-path","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.swiftmodule","-output-file-map","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/output-file-map.json","-parse-as-library","-incremental","-c","@/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/sources","-I","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug","-target","x86_64-unknown-linux-gnu","-swift-version","5","-enable-batch-mode","-index-store-path","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-j1","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-g","-Xcc","-fPIC","-Xcc","-g","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.FinalProjectPackageDiscoveredTests-debug.module":
+    tool: shell
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.derived/FinalProjectTests.swift","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.derived/all-discovered-tests.swift","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/swift-version-368B64E4461193D2.txt","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.swiftmodule","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/sources"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/FinalProjectTests.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/all-discovered-tests.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.swiftmodule"]
+    description: "Compiling Swift Module 'FinalProjectPackageDiscoveredTests' (2 sources)"
+    args: ["/home/ubuntu/swift/swift-5.10-DEVELOPMENT-SNAPSHOT-2024-03-02-a-ubuntu22.04/usr/bin/swiftc","-module-name","FinalProjectPackageDiscoveredTests","-emit-dependencies","-emit-module","-emit-module-path","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.swiftmodule","-output-file-map","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/sources","-I","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug","-target","x86_64-unknown-linux-gnu","-swift-version","5","-enable-batch-mode","-index-store-path","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-j1","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-g","-Xcc","-fPIC","-Xcc","-g","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.FinalProjectPackageTests-debug.module":
+    tool: shell
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.derived/runner.swift","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/swift-version-368B64E4461193D2.txt","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.swiftmodule","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.swiftmodule","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/sources"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/runner.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.swiftmodule"]
+    description: "Compiling Swift Module 'FinalProjectPackageTests' (1 sources)"
+    args: ["/home/ubuntu/swift/swift-5.10-DEVELOPMENT-SNAPSHOT-2024-03-02-a-ubuntu22.04/usr/bin/swiftc","-module-name","FinalProjectPackageTests","-emit-dependencies","-emit-module","-emit-module-path","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.swiftmodule","-output-file-map","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/sources","-I","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug","-target","x86_64-unknown-linux-gnu","-swift-version","5","-enable-batch-mode","-index-store-path","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-j1","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-g","-Xcc","-fPIC","-Xcc","-g","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.FinalProjectPackageTests-debug.test":
+    tool: shell
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/ConsoleHandler.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/FileService.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/FinalProject.swiftmodule.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/InventoryService.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/Order.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/OrderService.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/Product.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/User.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.build/UserService.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/FinalProjectPackageDiscoveredTests.swiftmodule.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/FinalProjectTests.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageDiscoveredTests.build/all-discovered-tests.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/FinalProjectPackageTests.swiftmodule.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.build/runner.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/FinalProjectTests.swiftmodule.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/InventoryServiceTests.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/UserServiceTests.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.product/Objects.LinkFileList"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.xctest"]
+    description: "Linking ./.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.xctest"
+    args: ["/home/ubuntu/swift/swift-5.10-DEVELOPMENT-SNAPSHOT-2024-03-02-a-ubuntu22.04/usr/bin/swiftc","-L","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug","-o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.xctest","-module-name","FinalProjectPackageTests","-emit-executable","-Xlinker","-rpath=$ORIGIN","@/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectPackageTests.product/Objects.LinkFileList","-target","x86_64-unknown-linux-gnu","-g"]
+
+  "C.FinalProjectTests-debug.module":
+    tool: shell
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/Tests/FinalProjectTests/InventoryServiceTests.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Tests/FinalProjectTests/UserServiceTests.swift","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/swift-version-368B64E4461193D2.txt","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProject.swiftmodule","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/sources"]
+    outputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/InventoryServiceTests.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/UserServiceTests.swift.o","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.swiftmodule"]
+    description: "Compiling Swift Module 'FinalProjectTests' (2 sources)"
+    args: ["/home/ubuntu/swift/swift-5.10-DEVELOPMENT-SNAPSHOT-2024-03-02-a-ubuntu22.04/usr/bin/swiftc","-module-name","FinalProjectTests","-emit-dependencies","-emit-module","-emit-module-path","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.swiftmodule","-output-file-map","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/FinalProjectTests.build/sources","-I","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug","-target","x86_64-unknown-linux-gnu","-swift-version","5","-enable-batch-mode","-index-store-path","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-j1","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/home/ubuntu/practice1/ProfProg/FinalProject/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-g","-Xcc","-fPIC","-Xcc","-g","-Xcc","-fno-omit-frame-pointer"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/home/ubuntu/practice1/ProfProg/FinalProject/Sources/FinalProject/","/home/ubuntu/practice1/ProfProg/FinalProject/Tests/FinalProjectTests/","/home/ubuntu/practice1/ProfProg/FinalProject/Package.swift","/home/ubuntu/practice1/ProfProg/FinalProject/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
